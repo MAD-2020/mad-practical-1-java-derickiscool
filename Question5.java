@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.*;
+
 
 public class Question5
 {
@@ -28,7 +30,42 @@ public class Question5
      
     Scanner in = new Scanner(System.in);
     System.out.println("Please enter number of integers: ");
-    for (int i =
+    int usernumber = in.nextInt();
+    List<Integer> list=new ArrayList<Integer>();
+    for (int i=0;i<usernumber;++i )
+    {
+    	System.out.println("Enter number: ");
+    	int number = in.nextInt();
+    	list.add(number);
+    	
+    }
+    int selectcount = 0;
+    int modenum = 0;
+    for (int i=0;i<usernumber;++i)
+    {
+    	
+    	int selectnum = list.get(i);
+    	int count = 0;
+    	for (int j=0;j<list.size();++j)
+    	{
+    		
+    		if (selectnum == list.get(j))
+    		{
+    			count +=1;
+    		}
+    	}    	
+    	if (count>selectcount) 
+    	{
+    		selectcount = count;
+    		
+    		modenum = selectnum;
+    		System.out.println(selectnum);
+    		
+    	}    	
+    }
+    System.out.println("The mode is: "+ modenum);
+    
+    
   }
 }
 
