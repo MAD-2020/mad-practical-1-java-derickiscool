@@ -1,4 +1,7 @@
+import java.util.Arrays;
 import java.util.Scanner;
+
+
 
 public class Question4
 {
@@ -18,6 +21,21 @@ public class Question4
      */
      
     Scanner in = new Scanner(System.in);
+    System.out.println("Please input number: "); //prompts user for base number
+    int base = in.nextInt();
     
+    for (int i=0; i<base+1; ++i)
+    {
+    	for (int j=base; j>0; --j )
+    	{
+    		char [] chars = new char[j];
+    		Arrays.fill(chars, '*');
+    		String repeated = new String(chars);
+    		System.out.println(repeated); 
+    		
+    	}
+    	
+    }
+    in.close();
   }
 }
